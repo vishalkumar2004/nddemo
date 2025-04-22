@@ -12,6 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize Feather icons
   feather.replace()
 
+
+
+// Initialize AOS and other scripts as in your original file
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS animations
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disable: window.innerWidth < 768 ? true : false
+  });
+
+  // Initialize Feather icons
+  feather.replace();
+  
+  // Your other JavaScript functionality
+});
+
+
   // Set current year in footer
   document.getElementById("currentYear").textContent = new Date().getFullYear()
 

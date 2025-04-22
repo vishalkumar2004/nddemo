@@ -1,7 +1,9 @@
 /* Base Styles */
 :root {
   --primary: #e08e6d;
-  --primary-dark: #d17a57;
+  /* --primary:#FFA343; */
+  /* --primary-dark: #d17a57; */
+  --primary-dark:  #FFA343;
   --primary-light: #f5d7c6;
   --secondary: #7d5a50;
   --secondary-light: #b4a19a;
@@ -178,7 +180,8 @@ ul {
 
 .section-subtitle {
   font-size: 1.25rem;
-  color: var(--gray);
+  /* color: var(--gray); */
+  color: var(--dark);
   max-width: 48rem;
   margin: 0 auto;
 }
@@ -205,6 +208,13 @@ nav.scrolled {
   align-items: center;
   justify-content: space-between;
   /* padding: 0.75rem 1.5rem; */
+  padding: 0;
+}
+
+.corner-img {
+  width: 25px;
+  height: auto;
+  transition: all 0.3s ease;
 }
 
 .logo img {
@@ -352,16 +362,23 @@ nav .checkbox i {
   max-width: 100%;
   width: 400px;
   height: auto;
-  margin: 0 auto 2rem;
+  margin: 1rem auto 0.5rem;
   display: block;
 }
 
 .hero-title {
   font-weight: 900;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
 }
+/* @media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+} */
 
 .hero-subtitle {
   font-size: 1.25rem;
@@ -498,7 +515,10 @@ nav .checkbox i {
 /* Gallery Section */
 .gallery {
   padding: 6rem 0;
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  /* background-color: #e5e5f7;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 60px ), repeating-linear-gradient( #fce99e55,#ffce0b, #ffce0b ); */
 }
 
 
@@ -1048,13 +1068,39 @@ nav .checkbox i {
 
 /* Footer */
 .footer {
-  background-color: var(--dark);
-  color: var(--white);
-  padding: 5rem 0 2rem;
+  /* background-color: var(--dark); */
+  /* background-color: #ffa55d; */
+  background-color: 
+  #FFA343;
+  /* color: var(--white); */
+  color: black;
+  /* padding: 5rem 0 2rem; */
   position: relative;
 }
 
-.footer::before {
+.footer-flower {
+  text-align: center;
+  margin-top: 0px; /* Adjust if needed to pull it above the footer slightly */
+}
+
+.footer-flower img {
+  width: 690px; /* Resize as per your design */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-flower img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-flower img {
+    max-width: 85%;
+  }
+}
+
+/* .footer::before {
   content: "";
   position: absolute;
   top: -50px;
@@ -1063,7 +1109,7 @@ nav .checkbox i {
   height: 50px;
   background-color: var(--dark);
   clip-path: polygon(0 100%, 100% 100%, 50% 0);
-}
+} */
 
 .footer-grid {
   display: grid;
@@ -1081,12 +1127,13 @@ nav .checkbox i {
 }
 
 .footer-logo-img {
-  max-height: 60px;
-  filter: brightness(0) invert(1);
+  max-height: 80px;
+  /* filter: brightness(0) invert(1); */
 }
 
 .footer-description {
-  color: var(--gray-light);
+  /* color: var(--gray-light); */
+  color: black;
   margin-bottom: 1.5rem;
   opacity: 0.8;
 }
@@ -1475,10 +1522,7 @@ nav .checkbox i {
   margin: 0 1.25rem 1.25rem;
 }
 
-.corner-img {
-  width: 20px;
-  height: auto;
-}
+
 
 .fixed-img {
   width: 100px;
@@ -1616,6 +1660,8 @@ nav .checkbox i {
   overflow: hidden;
 }
 
+
+
 .responsive-embed iframe {
   position: absolute;
   top: 0;
@@ -1634,8 +1680,8 @@ nav .checkbox i {
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   bottom: 2rem;
   left: 2rem;
   background-color: #25d366;
@@ -1724,8 +1770,8 @@ nav .checkbox i {
   }
   
   .whatsapp-float {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     font-size: 22px;
     bottom: 1rem;
     left: 1rem;
@@ -1822,6 +1868,10 @@ nav .checkbox i {
   }
 }
 
+.responsive-embed {
+  padding-bottom: 28% !important;
+}
+
 /* Mobile Large (425px) */
 @media (min-width: 376px) and (max-width: 425px) {
   .section-title {
@@ -1894,10 +1944,13 @@ nav .checkbox i {
     grid-template-columns: 1fr;
   }
   
-  .responsive-embed {
+  /* .responsive-embed {
     padding-bottom: 56.25%;
-  }
+  } */
   
+  .responsive-embed {
+      padding-bottom: 28% !important;
+    }
   .form-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2128,3 +2181,255 @@ nav .checkbox i {
 
 
 
+.shine-button {
+  position: relative;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  /* padding-block: 0.5rem; */
+  /* padding-inline: 1.25rem; */
+  /* background-color: rgb(252, 123, 3); */
+  background-color: #fa6d35;
+  border-radius: 9999px;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  color: #ffffff;
+  /* gap: 10px; */
+  /* font-weight: bold; */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  /* outline: none;
+  overflow: hidden; */
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* text-decoration: none; */
+  /* margin: 1.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto; */
+}
+@media screen and (max-width: 450px) {
+  .shine-button {
+    /* padding-block: 0.5rem;
+    padding-inline: 1.25rem; */
+    font-size: 13px;
+    /* margin: 1.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+  
+}
+
+.shine-button:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.shine-button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  animation: shine 1.5s ease-out infinite;
+}
+
+@keyframes shine {
+  0% {
+      left: -100px;
+  }
+  
+  60% {
+      left: 100%;
+  }
+  
+  to {
+      left: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Media Query for 432px width */
+@media (max-width: 432px) {
+  /* General typography adjustments */
+  .section-title {
+    font-size: 1.85rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* Hero section adjustments */
+  .hero-logo {
+    width: 230px;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+    padding: 0 10px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .hero-buttons {
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Roller text adjustments */
+  .roller-wrapper {
+    font-size: 1.8rem;
+  }
+  
+  .roller {
+    height: 2.2rem;
+    line-height: 2.2rem;
+  }
+  
+  .roller-text {
+    font-size: 1.6rem;
+  }
+  
+  #spare-time {
+    font-size: 0.9rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  /* Section adjustments */
+  .services-grid,
+  .gallery-grid,
+  .featured-grid,
+  .specialties-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .service-card,
+  .gallery-item,
+  .featured-item,
+  .specialty-card {
+    margin: 0 10px;
+  }
+  
+  /* Gallery adjustments */
+  .gallery-filter {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 5px 2rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* About section adjustments */
+  .about-badge {
+    right: 50%;
+    transform: translateX(50%);
+    padding: 1.2rem;
+  }
+  
+  .about-badge-number {
+    font-size: 2rem;
+  }
+  
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Testimonials adjustments */
+  .testimonial-content {
+    padding: 1.8rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+  
+  /* Contact form adjustments */
+  .contact-form-container, 
+  .contact-info {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    padding: 0.75rem;
+  }
+  
+  .map-container {
+    height: 250px;
+  }
+  
+  /* Social media section */
+  .responsive-embed {
+    padding-bottom: 35% !important;
+  }
+  
+  .social-follow-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  /* Footer adjustments */
+  .footer-grid {
+    gap: 2rem;
+  }
+  
+  .footer-logo-img {
+    max-height: 70px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+  
+  /* Navigation adjustments */
+  .logo img {
+    height: 60px;
+  }
+  
+  .corner-img {
+    width: 20px;
+  }
+  
+  /* Contact image */
+  .contact-image {
+    width: 260px;
+    height: 70px;
+    margin: -28px auto 0px auto;
+  }
+}
